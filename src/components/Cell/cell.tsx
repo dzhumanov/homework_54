@@ -1,10 +1,10 @@
 import React from "react";
-import { Item } from "../../types";
+import { Cell } from "../../types";
 
-const Cell: React.FC<{item:Item; onClick: () => void }> = ({ item, onClick }) => {
+const Cell: React.FC<Cell> = ({ item, onClick, gameOver }) => {
   const {hasItem, clicked} = item;
   const handleClick = () => {
-    if (!clicked) {
+    if (!clicked && !gameOver) {
       onClick();
     }
   };

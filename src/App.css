@@ -23,6 +23,7 @@
   width: 350px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 5px;
   margin-top: 20px;
 }
@@ -36,4 +37,8 @@
 .reset-button {
   display: block;
   margin: 20px auto 0;
+}
+
+h1 {
+  text-align: center;
 }

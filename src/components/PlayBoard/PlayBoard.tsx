@@ -1,12 +1,12 @@
 import React from "react";
-import {Item} from "../../types";
 import Cell from "../Cell/cell";
+import { Board } from "../../types";
 
-const PlayBoard: React.FC<{items: Item[]; onCellClick: (index: number) => void }> = ({ items, onCellClick }) => {
+const PlayBoard: React.FC<Board> = ({ items, onCellClick, isGameOver }) => {
   return (
     <div className="board">
       {items.map((item, index) => (
-        <Cell key={index} item={item} onClick={() => onCellClick(index)} />
+        <Cell key={index} item={item} onClick={() => onCellClick(index)} gameOver={isGameOver} />
       ))}
     </div>
   );
